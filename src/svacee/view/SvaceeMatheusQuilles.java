@@ -9,6 +9,6 @@ package svacee.view;
  *
  * @author quilles
  */
-public class SaceveeMatheusQuilles {
+public class SvaceeMatheusQuilles {
     
 }

@@ -7,7 +7,7 @@ package svacee.view;
 
 /**
  *
- * @author lucas
+ * @author Ana Letícia, Lucas Diego e Matheus Quilles
  */
 public class SvaceeMainForm extends javax.swing.JFrame {
 
@@ -27,7 +27,13 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPainel = new javax.swing.JPanel();
+        jtbBarraFerramentas = new javax.swing.JToolBar();
+        jbObterDadosCSV = new javax.swing.JButton();
+        jbSair = new javax.swing.JButton();
+        jbTabelaDados = new javax.swing.JButton();
+        jbGraficoConsumo = new javax.swing.JButton();
+        jbSobre = new javax.swing.JButton();
         jlImg = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmArquivo = new javax.swing.JMenu();
@@ -42,21 +48,55 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Tela Inicial");
 
-        jlImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/graficohome.png"))); // NOI18N
+        jtbBarraFerramentas.setFloatable(false);
+        jtbBarraFerramentas.setRollover(true);
+        jtbBarraFerramentas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jlImg)
-                .addGap(0, 0, Short.MAX_VALUE))
+        jbObterDadosCSV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/lista24.png"))); // NOI18N
+        jbObterDadosCSV.setFocusable(false);
+        jbObterDadosCSV.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbObterDadosCSV.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jtbBarraFerramentas.add(jbObterDadosCSV);
+
+        jbSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/sair24.png"))); // NOI18N
+        jbSair.setFocusable(false);
+        jbSair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbSair.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jtbBarraFerramentas.add(jbSair);
+
+        jbTabelaDados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/tabela24.png"))); // NOI18N
+        jbTabelaDados.setFocusable(false);
+        jbTabelaDados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbTabelaDados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jtbBarraFerramentas.add(jbTabelaDados);
+
+        jbGraficoConsumo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/grafico24.png"))); // NOI18N
+        jbGraficoConsumo.setFocusable(false);
+        jbGraficoConsumo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbGraficoConsumo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jtbBarraFerramentas.add(jbGraficoConsumo);
+
+        jbSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/sobre24.png"))); // NOI18N
+        jbSobre.setFocusable(false);
+        jbSobre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jbSobre.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jtbBarraFerramentas.add(jbSobre);
+
+        jlImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/graficohome.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
+        jPainel.setLayout(jPainelLayout);
+        jPainelLayout.setHorizontalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jtbBarraFerramentas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jlImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jlImg)
-                .addGap(0, 0, Short.MAX_VALUE))
+        jPainelLayout.setVerticalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPainelLayout.createSequentialGroup()
+                .addComponent(jtbBarraFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlImg))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(1, 1, 1));
@@ -104,11 +144,13 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -156,7 +198,12 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPainel;
+    private javax.swing.JButton jbGraficoConsumo;
+    private javax.swing.JButton jbObterDadosCSV;
+    private javax.swing.JButton jbSair;
+    private javax.swing.JButton jbSobre;
+    private javax.swing.JButton jbTabelaDados;
     private javax.swing.JLabel jlImg;
     private javax.swing.JMenu jmAjuda;
     private javax.swing.JMenu jmArquivo;
@@ -166,5 +213,6 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiSair;
     private javax.swing.JMenuItem jmiSobre;
     private javax.swing.JMenuItem jmiTabelaDados;
+    private javax.swing.JToolBar jtbBarraFerramentas;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,7 +27,8 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPainel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jlImg = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmArquivo = new javax.swing.JMenu();
         jmiObterDadosCSV = new javax.swing.JMenuItem();
@@ -38,24 +39,35 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jmAjuda = new javax.swing.JMenu();
         jmiSobre = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Tela Inicial");
 
-        javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
-        jPainel.setLayout(jPainelLayout);
-        jPainelLayout.setHorizontalGroup(
-            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jlImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/graficohome.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jlImg)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        jPainelLayout.setVerticalGroup(
-            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 283, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jlImg)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jMenuBar1.setBackground(new java.awt.Color(1, 1, 1));
 
         jmArquivo.setText("Arquivo");
 
+        jmiObterDadosCSV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/lista.png"))); // NOI18N
         jmiObterDadosCSV.setText("Obter Dados de CSV");
         jmArquivo.add(jmiObterDadosCSV);
 
+        jmiSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/sair.png"))); // NOI18N
         jmiSair.setText("Sair");
         jmArquivo.add(jmiSair);
 
@@ -63,6 +75,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
         jmVisualizar.setText("Visualizar");
 
+        jmiTabelaDados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/tabela.png"))); // NOI18N
         jmiTabelaDados.setText("Tabela de Dados");
         jmiTabelaDados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +84,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         });
         jmVisualizar.add(jmiTabelaDados);
 
+        jmiGraficoConsumo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/grafico.png"))); // NOI18N
         jmiGraficoConsumo.setText("Gráfico de Consumo");
         jmVisualizar.add(jmiGraficoConsumo);
 
@@ -78,6 +92,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
         jmAjuda.setText("Ajuda");
 
+        jmiSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/sobre.png"))); // NOI18N
         jmiSobre.setText("Sobre");
         jmAjuda.add(jmiSobre);
 
@@ -89,14 +104,15 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmiTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTabelaDadosActionPerformed
@@ -140,7 +156,8 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPainel;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jlImg;
     private javax.swing.JMenu jmAjuda;
     private javax.swing.JMenu jmArquivo;
     private javax.swing.JMenu jmVisualizar;

@@ -27,21 +27,81 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPainel = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jmArquivo = new javax.swing.JMenu();
+        jmiObterDadosCSV = new javax.swing.JMenuItem();
+        jmiSair = new javax.swing.JMenuItem();
+        jmVisualizar = new javax.swing.JMenu();
+        jmiTabelaDados = new javax.swing.JMenuItem();
+        jmiGraficoConsumo = new javax.swing.JMenuItem();
+        jmAjuda = new javax.swing.JMenu();
+        jmiSobre = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
+        jPainel.setLayout(jPainelLayout);
+        jPainelLayout.setHorizontalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jPainelLayout.setVerticalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 283, Short.MAX_VALUE)
+        );
+
+        jmArquivo.setText("Arquivo");
+
+        jmiObterDadosCSV.setText("Obter Dados de CSV");
+        jmArquivo.add(jmiObterDadosCSV);
+
+        jmiSair.setText("Sair");
+        jmArquivo.add(jmiSair);
+
+        jMenuBar1.add(jmArquivo);
+
+        jmVisualizar.setText("Visualizar");
+
+        jmiTabelaDados.setText("Tabela de Dados");
+        jmiTabelaDados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiTabelaDadosActionPerformed(evt);
+            }
+        });
+        jmVisualizar.add(jmiTabelaDados);
+
+        jmiGraficoConsumo.setText("Gráfico de Consumo");
+        jmVisualizar.add(jmiGraficoConsumo);
+
+        jMenuBar1.add(jmVisualizar);
+
+        jmAjuda.setText("Ajuda");
+
+        jmiSobre.setText("Sobre");
+        jmAjuda.add(jmiSobre);
+
+        jMenuBar1.add(jmAjuda);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jmiTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTabelaDadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiTabelaDadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +139,15 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPainel;
+    private javax.swing.JMenu jmAjuda;
+    private javax.swing.JMenu jmArquivo;
+    private javax.swing.JMenu jmVisualizar;
+    private javax.swing.JMenuItem jmiGraficoConsumo;
+    private javax.swing.JMenuItem jmiObterDadosCSV;
+    private javax.swing.JMenuItem jmiSair;
+    private javax.swing.JMenuItem jmiSobre;
+    private javax.swing.JMenuItem jmiTabelaDados;
     // End of variables declaration//GEN-END:variables
 }

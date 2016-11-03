@@ -16,6 +16,11 @@ public class SvaceeMainForm extends javax.swing.JFrame {
      */
     public SvaceeMainForm() {
         initComponents();
+        jbObterDadosCSV.setToolTipText("Obter dados de arquivo CSV");
+        jbSair.setToolTipText("Sair do programa");
+        jbTabelaDados.setToolTipText("Obter dados da tabela");
+        jbGraficoConsumo.setToolTipText("Obter dados do gráfico");
+        jbSobre.setToolTipText("Sobre o programa");
     }
 
     /**
@@ -82,6 +87,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jbSobre.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jtbBarraFerramentas.add(jbSobre);
 
+        jlImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/img/graficohome.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
@@ -96,8 +102,10 @@ public class SvaceeMainForm extends javax.swing.JFrame {
             .addGroup(jPainelLayout.createSequentialGroup()
                 .addComponent(jtbBarraFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jlImg))
+                .addComponent(jlImg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        getContentPane().add(jPainel, java.awt.BorderLayout.CENTER);
 
         jMenuBar1.setBackground(new java.awt.Color(1, 1, 1));
 
@@ -139,19 +147,6 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jMenuBar1.add(jmAjuda);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
 
         pack();
         setLocationRelativeTo(null);

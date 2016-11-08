@@ -1,15 +1,10 @@
 package svacee.test;
+// @author Ana Letícia, Lucas Diego e Matheus Quilles
 
-/**
- *
- * @author lucas
- */
 class Dado {
 
     private String titulo;
     private Integer valor;
-    
-    
 
     public String getTitulo() {
         return titulo;

@@ -187,7 +187,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public void obterDadosCSV() {
+    public void buscarArquivoCSV() {
 
         try {
             JFileChooser jfc = new JFileChooser();
@@ -225,11 +225,11 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSairActionPerformed
 
     private void jmiObterDadosCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiObterDadosCSVActionPerformed
-        obterDadosCSV();
+        buscarArquivoCSV();
     }//GEN-LAST:event_jmiObterDadosCSVActionPerformed
 
     private void jbObterDadosCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbObterDadosCSVActionPerformed
-        obterDadosCSV();
+        buscarArquivoCSV();
     }//GEN-LAST:event_jbObterDadosCSVActionPerformed
 
     private void jbTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTabelaDadosActionPerformed

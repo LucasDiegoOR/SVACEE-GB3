@@ -57,6 +57,11 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jbObterDadosCSV.setFocusable(false);
         jbObterDadosCSV.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jbObterDadosCSV.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbObterDadosCSV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbObterDadosCSVActionPerformed(evt);
+            }
+        });
         jtbBarraFerramentas.add(jbObterDadosCSV);
 
         jbSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/sair24.png"))); // NOI18N
@@ -191,7 +196,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public void run() {
+    public void obterDadosCSV() {
 
         try {
             JFileChooser jfc = new JFileChooser();
@@ -226,8 +231,12 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSairActionPerformed
 
     private void jmiObterDadosCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiObterDadosCSVActionPerformed
-        run();
+        obterDadosCSV();
     }//GEN-LAST:event_jmiObterDadosCSVActionPerformed
+
+    private void jbObterDadosCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbObterDadosCSVActionPerformed
+        obterDadosCSV();
+    }//GEN-LAST:event_jbObterDadosCSVActionPerformed
 
 //    public void obterDadosCSV (método para ser usado em mais de um lugar)
     /**

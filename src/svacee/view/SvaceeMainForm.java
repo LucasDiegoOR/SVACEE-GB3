@@ -12,11 +12,11 @@ import svacee.entity.DadoConsumo;
 public class SvaceeMainForm extends javax.swing.JFrame {
 
     DadoConsumoCtrl dcc = new DadoConsumoCtrl();
-    SvaceeTabelaDadoConsumo tdc;
+    SvaceeTabelaDadoConsumo stdc;
     
     public SvaceeMainForm() {
         initComponents();
-        tdc = new SvaceeTabelaDadoConsumo();
+        stdc = new SvaceeTabelaDadoConsumo();
         jbObterDadosCSV.setToolTipText("Obter dados de arquivo CSV");
         jbSair.setToolTipText("Sair do programa");
         jbTabelaDados.setToolTipText("Obter dados da tabela");
@@ -79,12 +79,22 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jbTabelaDados.setFocusable(false);
         jbTabelaDados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jbTabelaDados.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbTabelaDados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbTabelaDadosActionPerformed(evt);
+            }
+        });
         jtbBarraFerramentas.add(jbTabelaDados);
 
         jbGraficoConsumo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/grafico24.png"))); // NOI18N
         jbGraficoConsumo.setFocusable(false);
         jbGraficoConsumo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jbGraficoConsumo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbGraficoConsumo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGraficoConsumoActionPerformed(evt);
+            }
+        });
         jtbBarraFerramentas.add(jbGraficoConsumo);
 
         jbSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/sobre24.png"))); // NOI18N
@@ -153,6 +163,11 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
         jmiGraficoConsumo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/grafico.png"))); // NOI18N
         jmiGraficoConsumo.setText("Gráfico de Consumo");
+        jmiGraficoConsumo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiGraficoConsumoActionPerformed(evt);
+            }
+        });
         jmVisualizar.add(jmiGraficoConsumo);
 
         jmbMenu.add(jmVisualizar);
@@ -192,12 +207,13 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     }
 
     private void jmiTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTabelaDadosActionPerformed
-        DefaultTableModel model = tdc.getTableModel();
+        DefaultTableModel model = stdc.getTableModel();
+        stdc.getTableModel().getDataVector().removeAllElements();
         for (DadoConsumo dc: dcc.getDados()) {
             model.addRow(new Object[]{dc.getDataHora(), dc.getIdPontoColeta(), dc.getValorKwH()});
         }
-        tdc.setTableModel(model);
-        tdc.setVisible(true);
+        stdc.setTableModel(model);
+        stdc.setVisible(true);
     }//GEN-LAST:event_jmiTabelaDadosActionPerformed
 
     private void jmiSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSairActionPerformed
@@ -215,6 +231,24 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     private void jbObterDadosCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbObterDadosCSVActionPerformed
         obterDadosCSV();
     }//GEN-LAST:event_jbObterDadosCSVActionPerformed
+
+    private void jbTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTabelaDadosActionPerformed
+        DefaultTableModel model = stdc.getTableModel();
+        stdc.getTableModel().getDataVector().removeAllElements();
+        for (DadoConsumo dc: dcc.getDados()) {
+            model.addRow(new Object[]{dc.getDataHora(), dc.getIdPontoColeta(), dc.getValorKwH()});
+        }
+        stdc.setTableModel(model);
+        stdc.setVisible(true);
+    }//GEN-LAST:event_jbTabelaDadosActionPerformed
+
+    private void jmiGraficoConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiGraficoConsumoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiGraficoConsumoActionPerformed
+
+    private void jbGraficoConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGraficoConsumoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbGraficoConsumoActionPerformed
 
 //    public void obterDadosCSV (método para ser usado em mais de um lugar)
     /**

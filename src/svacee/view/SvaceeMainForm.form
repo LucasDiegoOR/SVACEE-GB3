@@ -67,6 +67,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gr&#xe1;fico de Consumo"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jmiGraficoConsumoActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -187,6 +190,9 @@
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="verticalTextPosition" type="int" value="3"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbTabelaDadosActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jbGraficoConsumo">
               <Properties>
@@ -197,6 +203,9 @@
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="verticalTextPosition" type="int" value="3"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbGraficoConsumoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jbSobre">
               <Properties>

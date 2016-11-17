@@ -193,6 +193,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
     private void jmiTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTabelaDadosActionPerformed
         DefaultTableModel model = tdc.getTableModel();
+        tdc.getTableModel().getDataVector().removeAllElements();
         for (DadoConsumo dc: dcc.getDados()) {
             model.addRow(new Object[]{dc.getDataHora(), dc.getIdPontoColeta(), dc.getValorKwH()});
         }

@@ -2,18 +2,26 @@ package svacee.view;
 // @author Ana Letícia, Lucas Diego e Matheus Quilles
 
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import svacee.ctrl.DadoConsumoCtrl;
 import svacee.entity.DadoConsumo;
-
 
 public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
 
     DadoConsumoCtrl dcc = new DadoConsumoCtrl();
-    
+
     public SvaceeTabelaDadoConsumo() {
         initComponents();
+
     }
 
+    public void setTableModel(TableModel model){
+        jTabela.setModel(model);
+    }
+    
+    public DefaultTableModel getTableModel(){
+        return (DefaultTableModel) jTabela.getModel();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,7 +50,7 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
         jmAjuda = new javax.swing.JMenu();
         jmiSobre = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jTabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -190,7 +198,7 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSairActionPerformed
 
     private void jmiObterDadosCSVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiObterDadosCSVActionPerformed
-        
+
     }//GEN-LAST:event_jmiObterDadosCSVActionPerformed
 
     private void jmiSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSairActionPerformed
@@ -199,7 +207,7 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
 
     private void jmiTabelaDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiTabelaDadosActionPerformed
         DefaultTableModel model = (DefaultTableModel) jTabela.getModel();
-        for (DadoConsumo dc: dcc.getDados()) {
+        for (DadoConsumo dc : dcc.getDados()) {
             model.addRow(new Object[]{dc.getDataHora(), dc.getIdPontoColeta(), dc.getValorKwH()});
         }
     }//GEN-LAST:event_jmiTabelaDadosActionPerformed

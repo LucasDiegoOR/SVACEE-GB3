@@ -47,7 +47,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jmiSobre = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela Inicial");
+        setTitle("Tela Inicial - SVACEE");
 
         jtbBarraFerramentas.setFloatable(false);
         jtbBarraFerramentas.setRollover(true);
@@ -200,6 +200,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     public void buscarArquivoCSV() {
 
         try {
+            dcc.getDados().clear();
             JFileChooser jfc = new JFileChooser();
             int retorno = jfc.showOpenDialog(null);
             if (retorno == JFileChooser.APPROVE_OPTION) {

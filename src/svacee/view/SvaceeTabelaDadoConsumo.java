@@ -26,12 +26,14 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPainel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTabela = new javax.swing.JTable();
-        jlTitulo = new javax.swing.JLabel();
         jbSair = new javax.swing.JButton();
+        jlTitulo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Tabela de Consumo de Energia - SVACEE");
 
         jTabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -51,10 +53,6 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTabela);
 
-        jlTitulo.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
-        jlTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTitulo.setText("Tabela de Consumo de Energia");
-
         jbSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/sair24.png"))); // NOI18N
         jbSair.setFocusable(false);
         jbSair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -65,35 +63,46 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
             }
         });
 
+        jlTitulo.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
+        jlTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTitulo.setText("Tabela de Consumo de Energia");
+
+        javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
+        jPainel.setLayout(jPainelLayout);
+        jPainelLayout.setHorizontalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPainelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPainelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jbSair)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
+        );
+        jPainelLayout.setVerticalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPainelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSair))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 363, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
-                    .addComponent(jlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jbSair)
-                    .addContainerGap(482, Short.MAX_VALUE)))
+            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jbSair)
-                    .addContainerGap(440, Short.MAX_VALUE)))
+            .addComponent(jPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -140,6 +149,7 @@ public class SvaceeTabelaDadoConsumo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPainel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTabela;
     private javax.swing.JButton jbSair;

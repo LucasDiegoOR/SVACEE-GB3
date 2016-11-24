@@ -101,6 +101,11 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jbSobre.setFocusable(false);
         jbSobre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jbSobre.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jbSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSobreActionPerformed(evt);
+            }
+        });
         jtbBarraFerramentas.add(jbSobre);
 
         jlImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -124,7 +129,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
         getContentPane().add(jPainel, java.awt.BorderLayout.CENTER);
 
-        jmbMenu.setBackground(new java.awt.Color(66, 127, 226));
+        jmbMenu.setBackground(new java.awt.Color(79, 145, 254));
 
         jmArquivo.setText("Arquivo");
         jmArquivo.setFont(new java.awt.Font("Noto Sans", 0, 13)); // NOI18N
@@ -177,6 +182,11 @@ public class SvaceeMainForm extends javax.swing.JFrame {
 
         jmiSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/sobre.png"))); // NOI18N
         jmiSobre.setText("Sobre");
+        jmiSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiSobreActionPerformed(evt);
+            }
+        });
         jmAjuda.add(jmiSobre);
 
         jmbMenu.add(jmAjuda);
@@ -249,6 +259,14 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     private void jbGraficoConsumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGraficoConsumoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbGraficoConsumoActionPerformed
+
+    private void jmiSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSobreActionPerformed
+        new SvaceeSobre().setVisible(true);
+    }//GEN-LAST:event_jmiSobreActionPerformed
+
+    private void jbSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSobreActionPerformed
+        new SvaceeSobre().setVisible(true);
+    }//GEN-LAST:event_jbSobreActionPerformed
 
 //    public void obterDadosCSV (método para ser usado em mais de um lugar)
     /**

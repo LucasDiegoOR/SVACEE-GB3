@@ -3,13 +3,13 @@ package svacee.entity;
 
 import java.sql.Timestamp;
 
-public class DadoConsumo {
+public class SvaceeDadoConsumo {
 
     private Timestamp dataHora;
     private String idPontoColeta;
     private double valorKwH;
     
-    public DadoConsumo(){
+    public SvaceeDadoConsumo(){
         
     }
 

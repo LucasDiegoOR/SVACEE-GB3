@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import org.jfree.chart.ChartFactory;
@@ -131,7 +132,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
         jtbBarraFerramentas.add(jbSair);
 
         jlImg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/graficohome.jpg"))); // NOI18N
+        jlImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/svacee/view/img/graficohome.png"))); // NOI18N
 
         javax.swing.GroupLayout jpPaginaInicialLayout = new javax.swing.GroupLayout(jpPaginaInicial);
         jpPaginaInicial.setLayout(jpPaginaInicialLayout);
@@ -145,7 +146,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
             jpPaginaInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpPaginaInicialLayout.createSequentialGroup()
                 .addComponent(jlImg)
-                .addGap(0, 92, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jtpGuias.addTab("Página Inicial", jpPaginaInicial);
@@ -182,7 +183,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
             .addGroup(jpTabelaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         jtpGuias.addTab("Tabela", jpTabela);
@@ -229,7 +230,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
                     .addComponent(jcbPontoColeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addComponent(jbVisualizarGrafico)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         jtpGuias.addTab("Visualizar Gráfico", jpGrafico);
@@ -249,7 +250,7 @@ public class SvaceeMainForm extends javax.swing.JFrame {
             .addGroup(jPainelLayout.createSequentialGroup()
                 .addComponent(jtbBarraFerramentas, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jtpGuias, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jtpGuias, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -365,8 +366,20 @@ public class SvaceeMainForm extends javax.swing.JFrame {
     }
 
     public void criarGrafico() {
-        JPanel grafico = createChartPanel();
-        jtpGuias.add(grafico, "Gráfico de Consumo");
+        if (sdcc.getTeste() == 2) {
+            if (jtpGuias.getTabCount() == 4) {
+                jtpGuias.remove(3);
+            }
+
+            JPanel grafico = createChartPanel();
+            jtpGuias.add(grafico, "Gráfico de Consumo");
+            jtpGuias.setSelectedComponent(grafico);
+        } else {
+            JOptionPane.showMessageDialog(this, "O gráfico ainda não pode ser visualizado!"
+                    + "\nBusque e selecione o arquivo CSV!",
+                    "ERRO!", JOptionPane.ERROR_MESSAGE);
+        }
+
     }
 
     private JPanel createChartPanel() {

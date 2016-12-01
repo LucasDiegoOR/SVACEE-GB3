@@ -14,6 +14,7 @@ import svacee.entity.SvaceeDadoConsumo;
 public class SvaceeDadoConsumoCtrl {
 
     private File arq;
+    private int teste;
     private List<SvaceeDadoConsumo> dados = new ArrayList<>();
     private List<String> listaPontoColeta = new ArrayList<>();
     private List<SvaceeDadoConsumo> listaGrafico = new ArrayList<>();
@@ -48,6 +49,7 @@ public class SvaceeDadoConsumoCtrl {
                 getDados().add(sdc);
             }
         }
+        setTeste(2);
     }
 
     public void preencherPontoColeta() {
@@ -101,5 +103,13 @@ public class SvaceeDadoConsumoCtrl {
 
     public void setListaGrafico(List<SvaceeDadoConsumo> listaGrafico) {
         this.listaGrafico = listaGrafico;
+    }
+
+    public int getTeste() {
+        return teste;
+    }
+
+    public void setTeste(int teste) {
+        this.teste = teste;
     }
 }
